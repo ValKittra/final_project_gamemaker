@@ -20,11 +20,18 @@ else {
 }
 
 
-if (mouse_check_button_pressed(mb_left))
+if (mouse_check_button(mb_left) && can_shoot)
 {
     var projectile_dir = point_direction(x, y, mouse_x, mouse_y);
     var player_projectile = instance_create_layer(x, y, "Instances", obj_projectile);
+
     player_projectile.direction = projectile_dir;
     player_projectile.image_angle = projectile_dir;
-    player_projectile.damage *= damage;
+    player_projectile.damage = damage;
+    
+    //p.image_xscale = global.projectile_scale;
+    //p.image_yscale = global.projectile_scale;
+
+    can_shoot = false;
+    alarm[1] = shoot_cooldown_max; // when alarm[0] fires, we re-enable shooting
 }

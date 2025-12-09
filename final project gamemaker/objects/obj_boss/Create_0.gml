@@ -13,4 +13,8 @@ alarm[0] = 60;
 kb_x = 0;
 kb_y = 0;
 
-damage = 1;
+damage = 3;
+hp_total = 25;
+
+can_shoot = true;
+shoot_cooldown_max = 30;

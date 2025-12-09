@@ -128,13 +128,27 @@ function apply_buff_to(target)
                 break;
 
             case "+2 damage":
-                damage += 2; // or +=1? up to you
+                damage += 2; 
                 break;
 
-            //case "Become bigger":
-                //image_xscale += 0.7;
-                //image_yscale += 0.7;
+            case "Become bigger":
+                image_xscale += 0.7;
+                image_yscale += 0.7;
+                break;
+            
+            case "Heal 5 HP":
+                hp += 5;
+                break;
+            //case "Bigger projectiles":
+                //global.projectile_scale += 0.7;
                 //break;
+            //case "Less attack cooldown":
+                //with (global.player)
+                //{
+                    //shoot_cooldown_max = max(1, shoot_cooldown_max - 10);
+                //}
+                //break;
+                
         }
     }
 }
