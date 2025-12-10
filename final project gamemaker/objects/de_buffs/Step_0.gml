@@ -43,10 +43,10 @@ if (state == "roll")
     roll = irandom_range(1, 20);
     show_debug_message("ROLLED " + string(roll) + "  — room: " + string(room));
     // build the text
-    if (roll <= 8)      roll_text = "FAIL — Boss gets the buff!";
-    else if (roll <= 14)roll_text = "PARTIAL SUCCESS — Both get the buff!";
-    else if (roll <= 19)roll_text = "SUCCESS — You get the buff!";
-    else                roll_text = "CRITICAL SUCCESS — You get double buff!";
+    if (roll <= 8)      roll_text = "FAIL! Boss gets the buff!";
+    else if (roll <= 14)roll_text = "PARTIAL SUCCESS! Both get the buff!";
+    else if (roll <= 19)roll_text = "SUCCESS! You get the buff!";
+    else                roll_text = "CRITICAL SUCCESS! You get double buff!";
     state = "result";
 }
 
